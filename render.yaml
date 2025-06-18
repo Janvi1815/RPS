@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: RPS
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python rps.py
+    envVars:
+      - key: FLASK_ENV
+        value: production
+    plan: free
